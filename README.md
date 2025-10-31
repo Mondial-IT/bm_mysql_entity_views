@@ -36,7 +36,7 @@ view_<entity_type>__<bundle>__meta (column_name, comment, source)
 ### With Composer (recommended)
 
 ```bash
-composer require bluemarloc/bm_mysql_entity_views
+composer require mondial-it/bm_mysql_entity_views
 drush en bm_mysql_entity_views -y
 ```
 
