@@ -36,18 +36,18 @@ view_<entity_type>__<bundle>__meta (column_name, comment, source)
 ### With Composer (recommended)
 
 ```bash
-composer require bluemarloc/mysql_entity_views
-drush en mysql_entity_views -y
+composer require bluemarloc/bm_mysql_entity_views
+drush en bm_mysql_entity_views -y
 ```
 
 > The module auto-builds views on install.
 
 ### Manually
 
-Copy the `mysql_entity_views/` directory into `web/modules/custom/` (or `modules/custom/`) and enable:
+Copy the `bm_mysql_entity_views/` directory into `web/modules/custom/` (or `modules/custom/`) and enable:
 
 ```bash
-drush en mysql_entity_views -y
+drush en bm_mysql_entity_views -y
 ```
 
 ---
@@ -110,13 +110,13 @@ LEFT JOIN view_node__article__meta m
 Rebuild all views (via the route controller):
 
 ```bash
-drush ev "\Drupal::service('mysql_entity_views.generator')->rebuildAll();"
+drush ev "\Drupal::service('bm_mysql_entity_views.generator')->rebuildAll();"
 ```
 
 Drop all views created by this module:
 
 ```bash
-drush ev "\Drupal::service('mysql_entity_views.generator')->dropAll();"
+drush ev "\Drupal::service('bm_mysql_entity_views.generator')->dropAll();"
 ```
 
 ---

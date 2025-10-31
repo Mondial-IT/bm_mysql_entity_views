@@ -1,5 +1,5 @@
 {
-  "name": "bluemarloc/mysql_entity_views",
+  "name": "mondial-it/bm_mysql_entity_views",
   "description": "Drupal 11 module that creates MySQL VIEWs per bundle to flatten entities for BI/reporting, with settings and companion meta-views.",
   "type": "drupal-module",
   "license": "GPL-2.0-or-later",
@@ -18,7 +18,7 @@
   },
   "autoload": {
     "psr-4": {
-      "Drupal\\mysql_entity_views\\": "src/"
+      "Drupal\\bm_mysql_entity_views\\": "src/"
     }
   },
   "scripts": {
@@ -33,7 +33,7 @@
     }
   },
   "support": {
-    "issues": "https://github.com/bluemarloc/mysql_entity_views/issues",
-    "source": "https://github.com/bluemarloc/mysql_entity_views"
+    "issues": "https://github.com/mondial-it/bm_mysql_entity_views/issues",
+    "source": "https://github.com/mondial-it/bm_mysql_entity_views"
   }
 }

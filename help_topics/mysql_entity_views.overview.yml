@@ -1,6 +1,6 @@
-# FILE: mysql_entity_views/help_topics/mysql_entity_views.overview.yml
-id: mysql_entity_views.overview
+# FILE: bm_mysql_entity_views/help_topics/bm_mysql_entity_views.overview.yml
+id: bm_mysql_entity_views.overview
 label: 'MySQL Entity Views: overview'
-provider: mysql_entity_views
+provider: bm_mysql_entity_views
 top_level: true
 body: help_topic--mysql-entity-views-overview

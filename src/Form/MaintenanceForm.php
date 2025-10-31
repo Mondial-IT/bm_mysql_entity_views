@@ -1,13 +1,13 @@
 <?php
-// FILE: mysql_entity_views/src/Form/MaintenanceForm.php
+// FILE: bm_mysql_entity_views/src/Form/MaintenanceForm.php
 declare(strict_types=1);
 
-namespace Drupal\mysql_entity_views\Form;
+namespace Drupal\bm_mysql_entity_views\Form;
 
 use Drupal\Core\DependencyInjection\ContainerInjectionInterface;
 use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
-use Drupal\mysql_entity_views\MySqlViewGenerator;
+use Drupal\bm_mysql_entity_views\MySqlViewGenerator;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 final class MaintenanceForm extends FormBase implements ContainerInjectionInterface {
@@ -15,20 +15,20 @@ final class MaintenanceForm extends FormBase implements ContainerInjectionInterf
   public function __construct(private readonly MySqlViewGenerator $generator) {}
 
   public static function create(ContainerInterface $container): static {
-    $svc = $container->get('mysql_entity_views.generator');
+    $svc = $container->get('bm_mysql_entity_views.generator');
     if (!$svc instanceof MySqlViewGenerator) {
-      throw new \RuntimeException('Service "mysql_entity_views.generator" is not an instance of MySqlViewGenerator.');
+      throw new \RuntimeException('Service "bm_mysql_entity_views.generator" is not an instance of MySqlViewGenerator.');
     }
     return new self($svc);
   }
 
   public function getFormId(): string {
-    return 'mysql_entity_views_maintenance_form';
+    return 'bm_mysql_entity_views_maintenance_form';
   }
 
   public function buildForm(array $form, FormStateInterface $form_state): array {
     // Attach small admin CSS.
-    $form['#attached']['library'][] = 'mysql_entity_views/admin';
+    $form['#attached']['library'][] = 'bm_mysql_entity_views/admin';
 
     $form['intro'] = [
       '#markup' => $this->t('Create or delete MySQL VIEWs that flatten entity data per bundle. Use with care on production.')

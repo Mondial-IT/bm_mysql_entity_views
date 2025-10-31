@@ -1,12 +1,12 @@
 <?php
-// FILE: mysql_entity_views/src/Controller/RebuildController.php
+// FILE: bm_mysql_entity_views/src/Controller/RebuildController.php
 declare(strict_types=1);
 
-namespace Drupal\mysql_entity_views\Controller;
+namespace Drupal\bm_mysql_entity_views\Controller;
 
 use Drupal\Core\Controller\ControllerBase;
 use Drupal\Core\DependencyInjection\ContainerInjectionInterface;
-use Drupal\mysql_entity_views\MySqlViewGenerator;
+use Drupal\bm_mysql_entity_views\MySqlViewGenerator;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 final class RebuildController extends ControllerBase implements ContainerInjectionInterface {
@@ -14,9 +14,9 @@ final class RebuildController extends ControllerBase implements ContainerInjecti
   public function __construct(private readonly MySqlViewGenerator $generator) {}
 
   public static function create(ContainerInterface $container): static {
-    $svc = $container->get('mysql_entity_views.generator');
+    $svc = $container->get('bm_mysql_entity_views.generator');
     if (!$svc instanceof MySqlViewGenerator) {
-      throw new \RuntimeException('Service "mysql_entity_views.generator" is not an instance of MySqlViewGenerator.');
+      throw new \RuntimeException('Service "bm_mysql_entity_views.generator" is not an instance of MySqlViewGenerator.');
     }
     return new self($svc);
   }

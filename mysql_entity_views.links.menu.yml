@@ -1,7 +1,7 @@
-# FILE: mysql_entity_views/mysql_entity_views.links.menu.yml
-mysql_entity_views.maintenance:
+# FILE: bm_mysql_entity_views/bm_mysql_entity_views.links.menu.yml
+bm_mysql_entity_views.maintenance:
   title: 'MySQL Entity Views'
   description: 'Create or delete SQL VIEWs that flatten entity data per bundle.'
-  route_name: mysql_entity_views.maintenance
+  route_name: bm_mysql_entity_views.maintenance
   parent: system.admin_config_development
   weight: 50

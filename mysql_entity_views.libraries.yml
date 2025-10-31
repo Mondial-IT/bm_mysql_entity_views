@@ -1,4 +1,4 @@
-# FILE: mysql_entity_views/mysql_entity_views.libraries.yml
+# FILE: bm_mysql_entity_views/bm_mysql_entity_views.libraries.yml
 admin:
   css:
     theme:

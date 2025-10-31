@@ -1,8 +1,8 @@
 <?php
-// FILE: mysql_entity_views/src/MySqlViewGenerator.php
+// FILE: bm_mysql_entity_views/src/MySqlViewGenerator.php
 declare(strict_types=1);
 
-namespace Drupal\mysql_entity_views;
+namespace Drupal\bm_mysql_entity_views;
 
 use Drupal\Core\Config\ConfigFactoryInterface;
 use Drupal\Core\Database\Connection;
@@ -19,7 +19,7 @@ final class MySqlViewGenerator {
   ) {}
 
   private function cfg() {
-    return $this->configFactory->get('mysql_entity_views.settings');
+    return $this->configFactory->get('bm_mysql_entity_views.settings');
   }
 
   public function rebuildAll(): array {

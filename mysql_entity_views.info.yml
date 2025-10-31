@@ -1,4 +1,4 @@
-# FILE: mysql_entity_views/mysql_entity_views.info.yml
+# FILE: bm_mysql_entity_views/bm_mysql_entity_views.info.yml
 name: 'MySQL Entity Views'
 type: module
 description: 'Creates MySQL VIEWs that flatten Drupal entity tables (e.g., node + field tables) into bundle-specific, denormalized SQL views. Includes a maintenance UI, settings, and meta-views with column comments.'

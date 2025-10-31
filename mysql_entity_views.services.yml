@@ -1,5 +1,5 @@
-# FILE: mysql_entity_views/mysql_entity_views.services.yml
+# FILE: bm_mysql_entity_views/bm_mysql_entity_views.services.yml
 services:
-  mysql_entity_views.generator:
-    class: Drupal\mysql_entity_views\MySqlViewGenerator
+  bm_mysql_entity_views.generator:
+    class: Drupal\bm_mysql_entity_views\MySqlViewGenerator
     arguments: ['@database', '@entity_type.manager', '@config.factory']

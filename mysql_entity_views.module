@@ -1,5 +1,5 @@
 <?php
-// FILE: mysql_entity_views/mysql_entity_views.module
+// FILE: bm_mysql_entity_views/bm_mysql_entity_views.module
 declare(strict_types=1);
 /**
  * Reserved for future hooks.
