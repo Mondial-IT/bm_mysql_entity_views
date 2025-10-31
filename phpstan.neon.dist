@@ -1,0 +1,17 @@
+includes:
+  - vendor/mglaman/phpstan-drupal/extension.neon
+  - vendor/mglaman/phpstan-drupal/rules.neon
+
+parameters:
+  level: max
+  paths:
+    - src
+  checkGenericClassInNonGenericObjectType: false
+
+  # Drupal-specific tweaks:
+  drupal:
+    entityMapping: true
+
+  ignoreErrors:
+    # Allow ControllerBase::t() dynamic return types in build arrays, etc., if noisy:
+    - '#Call to an undefined method Drupal\\Core\\StringTranslation\\TranslatableMarkup::.*#'

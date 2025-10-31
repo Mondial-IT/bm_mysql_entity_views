@@ -1,0 +1,5 @@
+# FILE: mysql_entity_views/mysql_entity_views.libraries.yml
+admin:
+  css:
+    theme:
+      css/admin.css: {}

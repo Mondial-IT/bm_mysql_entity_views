@@ -1,0 +1,22 @@
+<?php
+// FILE: mysql_entity_views/mysql_entity_views.install
+declare(strict_types=1);
+
+/**
+ * Implements hook_install().
+ */
+function mysql_entity_views_install(): void {
+  // Ensure default config exists.
+  \Drupal::configFactory()->getEditable('mysql_entity_views.settings')->set('separator', ' / ')->save();
+  // Build initial views.
+  $gen = \Drupal::service('mysql_entity_views.generator');
+  $gen->rebuildAll();
+}
+
+/**
+ * Implements hook_uninstall().
+ */
+function mysql_entity_views_uninstall(): void {
+  $gen = \Drupal::service('mysql_entity_views.generator');
+  $gen->dropAll();
+}

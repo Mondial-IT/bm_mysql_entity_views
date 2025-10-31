@@ -1,0 +1,39 @@
+{
+  "name": "bluemarloc/mysql_entity_views",
+  "description": "Drupal 11 module that creates MySQL VIEWs per bundle to flatten entities for BI/reporting, with settings and companion meta-views.",
+  "type": "drupal-module",
+  "license": "GPL-2.0-or-later",
+  "require": {
+    "php": ">=8.3",
+    "drupal/core": "^11.2",
+    "drupal/field": "*",
+    "drupal/help": "*"
+  },
+  "require-dev": {
+    "phpstan/phpstan": "^1.11",
+    "mglaman/phpstan-drupal": "^1.4",
+    "dealerdirect/phpcodesniffer-composer-installer": "^1.0",
+    "squizlabs/php_codesniffer": "^3.10",
+    "drupal/coder": "^8.3"
+  },
+  "autoload": {
+    "psr-4": {
+      "Drupal\\mysql_entity_views\\": "src/"
+    }
+  },
+  "scripts": {
+    "stan": "phpstan analyse --configuration=phpstan.neon.dist",
+    "cs": "phpcs",
+    "cs:fix": "phpcbf",
+    "lint": "find ./ -type f -name \"*.php\" -not -path \"./vendor/*\" -print0 | xargs -0 -n1 -P4 php -l"
+  },
+  "extra": {
+    "drupal": {
+      "version": "1.2.0"
+    }
+  },
+  "support": {
+    "issues": "https://github.com/bluemarloc/mysql_entity_views/issues",
+    "source": "https://github.com/bluemarloc/mysql_entity_views"
+  }
+}

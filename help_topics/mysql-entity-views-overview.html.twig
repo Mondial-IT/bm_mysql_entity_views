@@ -1,0 +1,28 @@
+{# FILE: mysql_entity_views/help_topics/mysql-entity-views-overview.html.twig #}
+<h2>What this module does</h2>
+<p><em>MySQL Entity Views</em> creates database <strong>VIEW</strong>s that flatten Drupal entities
+  into a denormalized, read-only table per bundle (e.g., <code>view_node__article</code>).
+  Each VIEW joins the entity’s base table with its field data tables and aggregates multi-value fields using <code>GROUP_CONCAT</code>.</p>
+
+<h2>When to use it</h2>
+<ul>
+  <li>For external reporting/BI tools that expect a single wide table per content type.</li>
+  <li>For quick SQL exploration without writing many JOINs.</li>
+</ul>
+
+<h2>Safety and limitations</h2>
+<ul>
+  <li>Views are read-only projections; they do not replace Drupal’s Entity API.</li>
+  <li>Only MySQL/MariaDB is supported. Other drivers are ignored.</li>
+  <li>Schema changes may require a rebuild using the maintenance form.</li>
+</ul>
+
+<h2>Settings</h2>
+<ul>
+  <li><strong>GROUP_CONCAT separator</strong> and <strong>group_concat_max_len</strong>.</li>
+  <li><strong>Ordering</strong> of multi-value items: by delta, by value, or none.</li>
+  <li><strong>Meta views</strong>: optional <code>&lt;view&gt;__meta</code> companion that lists each column with a human-readable comment.</li>
+</ul>
+
+<h2>Maintenance UI</h2>
+<p>Go to <strong>Configuration → Development → MySQL Entity Views</strong> to save settings, create, rebuild, or delete these views.</p>

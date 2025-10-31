@@ -1,0 +1,16 @@
+# FILE: mysql_entity_views/mysql_entity_views.routing.yml
+mysql_entity_views.rebuild:
+  path: '/admin/reports/mysql-entity-views/rebuild'
+  defaults:
+    _controller: '\Drupal\mysql_entity_views\Controller\RebuildController::rebuild'
+    _title: 'Rebuild MySQL Entity Views'
+  requirements:
+    _permission: 'administer site configuration'
+
+mysql_entity_views.maintenance:
+  path: '/admin/config/development/mysql-entity-views'
+  defaults:
+    _form: '\Drupal\mysql_entity_views\Form\MaintenanceForm'
+    _title: 'MySQL Entity Views'
+  requirements:
+    _permission: 'administer site configuration'
