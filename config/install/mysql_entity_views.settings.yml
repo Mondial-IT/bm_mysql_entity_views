@@ -1,0 +1,5 @@
+# FILE: mysql_entity_views/config/install/mysql_entity_views.settings.yml
+separator: ' / '
+group_concat_max_len: 1048576
+order_multi_values: 'delta'   # delta|value|none
+create_meta_views: true

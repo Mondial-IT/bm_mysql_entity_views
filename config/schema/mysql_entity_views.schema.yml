@@ -1,0 +1,20 @@
+# FILE: mysql_entity_views/config/schema/mysql_entity_views.schema.yml
+mysql_entity_views.settings:
+  type: config_object
+  label: 'MySQL Entity Views settings'
+  mapping:
+    separator:
+      type: string
+      label: 'GROUP_CONCAT separator'
+    group_concat_max_len:
+      type: integer
+      label: 'group_concat_max_len'
+    order_multi_values:
+      type: string
+      label: 'Ordering of multi-value items'
+      constraints:
+        AllowedValues:
+          choices: ['delta', 'value', 'none']
+    create_meta_views:
+      type: boolean
+      label: 'Create <view>__meta views with comments'
