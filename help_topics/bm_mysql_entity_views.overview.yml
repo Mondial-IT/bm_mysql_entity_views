@@ -3,4 +3,4 @@ id: bm_mysql_entity_views.overview
 label: 'MySQL Entity Views: overview'
 provider: bm_mysql_entity_views
 top_level: true
-body: help_topic--mysql-entity-views-overview
+body: help_topic--bm-mysql-entity-views-overview
